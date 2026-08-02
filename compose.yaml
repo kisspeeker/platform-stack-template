@@ -1,0 +1,13 @@
+services:
+  app:
+    image: ${IMAGE:?set IMAGE in .env}:latest
+    container_name: ${APP_NAME:?set APP_NAME in .env}
+    restart: unless-stopped
+    env_file: .env
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
+    name: proxy

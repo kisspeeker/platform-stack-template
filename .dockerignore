@@ -1,0 +1,6 @@
+.git
+.ops
+.env
+.env.*
+!.env.example
+README.md
